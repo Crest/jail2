@@ -29,6 +29,7 @@ stop_cmd="jail2_stop"
 
 jail2_start()
 {
+	devfs_init_rulesets
 	echo -n "Starting jails: "
 
 	for _j in ${jail2_list}; do
